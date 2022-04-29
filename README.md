@@ -1,5 +1,7 @@
 # Practice Launch X
 
-### Refactoring
+### New feature
 
-This is a repository where I am practicing refactoring a legacy code
+This is a repository where we are going to add a new functionality to our refactoring code.
+
+The new functionality, given a score, will return Fizz, Buzz, FizzBuzz or the score
