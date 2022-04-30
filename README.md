@@ -37,11 +37,11 @@ class ExplorerController {
 Lastly, we add to our server a new endpoint for this functionality.
 
 ```
-    app.get("/v1/fizzbuzz/:score",(request, response) => {
-        const score = request.params.score;
-        const trick = ExplorerController.getValidationFizzBuzzInNumber(score);
-        response.json({score: request.params.score, trick: trick});
-    });
+app.get("/v1/fizzbuzz/:score",(request, response) => {
+    const score = request.params.score;
+    const trick = ExplorerController.getValidationFizzBuzzInNumber(score);
+    response.json({score: request.params.score, trick: trick});
+});
 ```
 
 These are the expected values:
