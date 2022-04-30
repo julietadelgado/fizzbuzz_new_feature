@@ -6,6 +6,14 @@ This is a repository where we are going to add a new functionality to our refact
 
 The new functionality, given a score, will return Fizz, Buzz, FizzBuzz or the score.
 
+The flow of the new functionality is as follows:
+
+```mermaid
+graph TD;
+    FizzbuzzService-->ExplorerController;
+    ExplorerController-->Server
+```
+
 To achieve this we create the next static method in `FuzzbuzzService`
 
 ```
