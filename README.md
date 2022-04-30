@@ -9,29 +9,29 @@ The new functionality, given a score, will return Fizz, Buzz, FizzBuzz or the sc
 To achieve this we create the next static method in `FuzzbuzzService`
 
 ```
-	static applyValidationInNumber(number){
-        if(isNaN(number))
-            return "Error: The value is not a number";
-        
-        if(number % 3 == 0 && number % 5 == 0)
-            return "FIZZBUZZ";
-        else if(number % 3 == 0)
-            return "FIZZ";
-        else if(number % 5 == 0)
-            return "BUZZ";
-        else
-            return number;
-    }
+static applyValidationInNumber(number){
+    if(isNaN(number))
+        return "Error: The value is not a number";
+
+    if(number % 3 == 0 && number % 5 == 0)
+        return "FIZZBUZZ";
+    else if(number % 3 == 0)
+        return "FIZZ";
+    else if(number % 5 == 0)
+        return "BUZZ";
+    else
+        return number;
+}
 ```
 
 Then in our `ExplorerController` we add the call to the previous static method
 
 ```
-	class ExplorerController {
-		static getValidationFizzBuzzInNumber(number){
-            return FizzbuzzService.applyValidationInNumber(number);
-        }
-	}
+class ExplorerController {
+    static getValidationFizzBuzzInNumber(number){
+        return FizzbuzzService.applyValidationInNumber(number);
+    }
+}
 ```
 
 Lastly, we add to our server a new endpoint for this functionality.
@@ -44,7 +44,7 @@ Lastly, we add to our server a new endpoint for this functionality.
     });
 ```
 
-Those are the expected values:
+These are the expected values:
 | Endpoint | Request | Response |
 |---|---|---|
 | `localhost:3000/v1/fizzbuzz/:score` | `localhost:3000/v1/fizzbuzz/one` | `{score: 1, trick: "Error: The value is not a number"}` |
