@@ -17,4 +17,11 @@ describe("Test for ExplorerController", () => {
         const quantityExplorersInNode = ExplorerController.getExplorersAmonutByMission("node");
         expect(quantityExplorersInNode).toBe(10);
     });
+    test("4. Get Validation Fizzbuzz", () => {
+        expect(ExplorerController.getValidationFizzBuzzInNumber('one')).toBe("Error: The value is not a number"); 
+        expect(ExplorerController.getValidationFizzBuzzInNumber(1)).toBe(1); 
+        expect(ExplorerController.getValidationFizzBuzzInNumber(3)).toBe("FIZZ");
+        expect(ExplorerController.getValidationFizzBuzzInNumber(5)).toBe("BUZZ");
+        expect(ExplorerController.getValidationFizzBuzzInNumber(15)).toBe("FIZZBUZZ");
+    });
 });
